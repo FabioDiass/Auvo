@@ -1,7 +1,7 @@
 const { test, expect } = require('@playwright/test');
 const { ProductsPage } = require('../Pages/ProductsPage');
 
-test('Deve filtrar produtos por preço (alto para baixo)', async ({ page }) => {
+test('Deve filtrar produtos por preço (High para Low)', async ({ page }) => {
     // Login
     await page.goto('https://www.saucedemo.com/');
     await page.fill('[data-test="username"]', 'standard_user');
@@ -16,7 +16,7 @@ test('Deve filtrar produtos por preço (alto para baixo)', async ({ page }) => {
     await productsPage.validateSortedProducts();
 });
 
-test('Deve filtrar produtos por preço (baixo para alto)', async ({ page }) => {
+test('Deve filtrar produtos por preço (Low para High)', async ({ page }) => {
     await page.goto('https://www.saucedemo.com/');
     await page.fill('[data-test="username"]', 'standard_user');
     await page.fill('[data-test="password"]', 'secret_sauce');
