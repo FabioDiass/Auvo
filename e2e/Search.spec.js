@@ -2,7 +2,6 @@ const { test, expect } = require('@playwright/test');
 const { ProductsPage } = require('../Pages/ProductsPage');
 
 test('Deve filtrar produtos por preço (High para Low)', async ({ page }) => {
-    // Login
     await page.goto('https://www.saucedemo.com/');
     await page.fill('[data-test="username"]', 'standard_user');
     await page.fill('[data-test="password"]', 'secret_sauce');
